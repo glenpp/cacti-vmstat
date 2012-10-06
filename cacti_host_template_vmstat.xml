@@ -48,7 +48,7 @@
 			<hash_10002193070a1665285dc2779e50ddfe071300>
 				<task_item_id>hash_080021996077f6a58fda535ffdd0b08194e29f</task_item_id>
 				<color_id>FF0000</color_id>
-				<alpha>7F</alpha>
+				<alpha>FF</alpha>
 				<graph_type_id>7</graph_type_id>
 				<consolidation_function_id>1</consolidation_function_id>
 				<cdef_id>0</cdef_id>
@@ -61,7 +61,7 @@
 			<hash_10002110793172b67a8499ea4cc0c35346544a>
 				<task_item_id>hash_08002186a30980b48b12c0f8eecc5e0d1619da</task_item_id>
 				<color_id>EA8F00</color_id>
-				<alpha>7F</alpha>
+				<alpha>FF</alpha>
 				<graph_type_id>8</graph_type_id>
 				<consolidation_function_id>1</consolidation_function_id>
 				<cdef_id>0</cdef_id>
