@@ -16,7 +16,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #
 #
-# See: http://www.pitt-pladdy.com/blog/_
+# See: http://www.pitt-pladdy.com/blog/_20121016-192335_0100_vmstat_on_Cacti_via_SNMP/
 
 
 /usr/bin/vmstat -S K 300 2 \
