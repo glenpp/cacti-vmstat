@@ -510,7 +510,7 @@
 				<gprint_id>hash_060021e9c43831e54eca8069317a2ce8c6f751</gprint_id>
 				<text_format>sy</text_format>
 				<hard_return></hard_return>
-				<sequence>3</sequence>
+				<sequence>2</sequence>
 			</hash_1000217809bbc9fb6c24e6824c8198230a8323>
 			<hash_10002177d2ab4336e73a167656eaab53b36fd2>
 				<task_item_id>hash_080021207848b2fff57226888e2277bcf49b36</task_item_id>
@@ -523,8 +523,21 @@
 				<gprint_id>hash_060021e9c43831e54eca8069317a2ce8c6f751</gprint_id>
 				<text_format>us</text_format>
 				<hard_return></hard_return>
-				<sequence>4</sequence>
+				<sequence>3</sequence>
 			</hash_10002177d2ab4336e73a167656eaab53b36fd2>
+			<hash_10002116f0bf60bdfac7ae1808bd7b0da3b062>
+				<task_item_id>hash_080021e555882fcb66b7d11ce3948ab5e160aa</task_item_id>
+				<color_id>D8ACE0</color_id>
+				<alpha>FF</alpha>
+				<graph_type_id>8</graph_type_id>
+				<consolidation_function_id>1</consolidation_function_id>
+				<cdef_id>0</cdef_id>
+				<value></value>
+				<gprint_id>hash_060021e9c43831e54eca8069317a2ce8c6f751</gprint_id>
+				<text_format>st</text_format>
+				<hard_return></hard_return>
+				<sequence>4</sequence>
+			</hash_10002116f0bf60bdfac7ae1808bd7b0da3b062>
 			<hash_100021e556254f19f1d040a9205c8879b85b7e>
 				<task_item_id>hash_080021d2bb907befdccb987db3d15bc744a9de</task_item_id>
 				<color_id>00FF00</color_id>
@@ -564,6 +577,12 @@
 				<column_name>task_item_id</column_name>
 				<items>hash_0000217809bbc9fb6c24e6824c8198230a8323</items>
 			</hash_090021052cee49ebd24de9e0f434a2dbac40d8>
+			<hash_090021545f00564fe11bfffe03a9a4a965bc29>
+				<name>Data Source [vmstat_cpu_st]</name>
+				<description></description>
+				<column_name>task_item_id</column_name>
+				<items>hash_00002116f0bf60bdfac7ae1808bd7b0da3b062</items>
+			</hash_090021545f00564fe11bfffe03a9a4a965bc29>
 		</inputs>
 	</hash_0000215ab3944e961507c95cfcdebaa515ba85>
 	<hash_00002198c76fe53282fe271c1845762c80974f>
@@ -1300,7 +1319,7 @@
 			<item_005>
 				<data_input_field_id>hash_0700214276a5ec6e3fe33995129041b1909762</data_input_field_id>
 				<t_value></t_value>
-				<value>NET-SNMP-EXTEND-MIB::nsExtendOutLine.&quot;vmstat&quot;.17</value>
+				<value>NET-SNMP-EXTEND-MIB::nsExtendOutLine.&quot;vmstat&quot;.18</value>
 			</item_005>
 			<item_006>
 				<data_input_field_id>hash_070021012ccb1d3687d3edb29c002ea66e72da</data_input_field_id>
@@ -2025,6 +2044,93 @@
 			</item_010>
 		</data>
 	</hash_010021a7c6cbd787c62d76d137978617ab5661>
+	<hash_010021ffd503b1abf83504c893ba66a82c61f9>
+		<name>vmstat cpu st</name>
+		<ds>
+			<t_name></t_name>
+			<name>|host_description| - vmstat cpu st</name>
+			<data_input_id>hash_0300213eb92bb845b9660a7445cf9740726522</data_input_id>
+			<t_rra_id></t_rra_id>
+			<t_rrd_step></t_rrd_step>
+			<rrd_step>300</rrd_step>
+			<t_active></t_active>
+			<active>on</active>
+			<rra_items>hash_150021c21df5178e5c955013591239eb0afd46|hash_1500210d9c0af8b8acdc7807943937b3208e29|hash_1500216fc2d038fb42950138b0ce3e9874cc60|hash_150021e36f3adb9f152adfa5dc50fd2b23337e|hash_150021283ea2bf1634d92ce081ec82a634f513</rra_items>
+		</ds>
+		<items>
+			<hash_080021e555882fcb66b7d11ce3948ab5e160aa>
+				<t_data_source_name></t_data_source_name>
+				<data_source_name>vmstat_cpu_st</data_source_name>
+				<t_rrd_minimum></t_rrd_minimum>
+				<rrd_minimum>0</rrd_minimum>
+				<t_rrd_maximum></t_rrd_maximum>
+				<rrd_maximum>100</rrd_maximum>
+				<t_data_source_type_id></t_data_source_type_id>
+				<data_source_type_id>1</data_source_type_id>
+				<t_rrd_heartbeat></t_rrd_heartbeat>
+				<rrd_heartbeat>600</rrd_heartbeat>
+				<t_data_input_field_id></t_data_input_field_id>
+				<data_input_field_id>0</data_input_field_id>
+			</hash_080021e555882fcb66b7d11ce3948ab5e160aa>
+		</items>
+		<data>
+			<item_000>
+				<data_input_field_id>hash_070021d94caa7cc3733bd95ee00a3917fdcbb5</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_000>
+			<item_001>
+				<data_input_field_id>hash_070021feda162701240101bc74148415ef415a</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_001>
+			<item_002>
+				<data_input_field_id>hash_070021c60c9aac1e1b3555ea0620b8bbfd82cb</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_002>
+			<item_003>
+				<data_input_field_id>hash_07002120832ce12f099c8e54140793a091af90</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_003>
+			<item_004>
+				<data_input_field_id>hash_070021fc64b99742ec417cc424dbf8c7692d36</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_004>
+			<item_005>
+				<data_input_field_id>hash_0700214276a5ec6e3fe33995129041b1909762</data_input_field_id>
+				<t_value></t_value>
+				<value>NET-SNMP-EXTEND-MIB::nsExtendOutLine.&quot;vmstat&quot;.17</value>
+			</item_005>
+			<item_006>
+				<data_input_field_id>hash_070021012ccb1d3687d3edb29c002ea66e72da</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_006>
+			<item_007>
+				<data_input_field_id>hash_0700219c55a74bd571b4f00a96fd4b793278c6</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_007>
+			<item_008>
+				<data_input_field_id>hash_070021ad14ac90641aed388139f6ba86a2e48b</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_008>
+			<item_009>
+				<data_input_field_id>hash_07002132285d5bf16e56c478f5e83f32cda9ef</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_009>
+			<item_010>
+				<data_input_field_id>hash_07002192f5906c8dc0f964b41f4253df582c38</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_010>
+		</data>
+	</hash_010021ffd503b1abf83504c893ba66a82c61f9>
 	<hash_0100214f5a49f9670ba3fbc6cba9e12b27003d>
 		<name>vmstat system in</name>
 		<ds>
