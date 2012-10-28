@@ -18,7 +18,7 @@
 #
 # See: http://www.pitt-pladdy.com/blog/_20121016-192335_0100_vmstat_on_Cacti_via_SNMP/
 #
-# Version 20121026
+# Version 20121028
 
 
 /usr/bin/vmstat -S K 300 2 \
