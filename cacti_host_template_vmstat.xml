@@ -137,7 +137,7 @@
 				<cdef_id>hash_050021634a23af5e78af0964e8d33b1a4ed26b</cdef_id>
 				<value></value>
 				<gprint_id>hash_060021e9c43831e54eca8069317a2ce8c6f751</gprint_id>
-				<text_format>Total</text_format>
+				<text_format>Physical</text_format>
 				<hard_return></hard_return>
 				<sequence>1</sequence>
 			</hash_1000215476d9ce74d806e34869638510e90050>
@@ -145,7 +145,7 @@
 				<task_item_id>hash_0800219cb30dfcc37ef395517256d5292cf309</task_item_id>
 				<color_id>FF0000</color_id>
 				<alpha>FF</alpha>
-				<graph_type_id>7</graph_type_id>
+				<graph_type_id>8</graph_type_id>
 				<consolidation_function_id>1</consolidation_function_id>
 				<cdef_id>hash_050021634a23af5e78af0964e8d33b1a4ed26b</cdef_id>
 				<value></value>
@@ -158,7 +158,7 @@
 				<task_item_id>hash_080021c5f84c5cf662977e4c7028a690c38777</task_item_id>
 				<color_id>EA8F00</color_id>
 				<alpha>FF</alpha>
-				<graph_type_id>8</graph_type_id>
+				<graph_type_id>7</graph_type_id>
 				<consolidation_function_id>1</consolidation_function_id>
 				<cdef_id>hash_050021634a23af5e78af0964e8d33b1a4ed26b</cdef_id>
 				<value></value>
