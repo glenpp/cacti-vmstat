@@ -33,13 +33,16 @@ VMSTAT_COMMAND = [
     '--wide',
     '300', '2',
 ]
-LABELS_EXPECT = [
+LABELS_EXPECT_BASE = [
     'procs.r', 'procs.b',
     'memory.swpd', 'memory.free', 'memory.buff', 'memory.cache',
     'swap.si', 'swap.so',
     'io.bi', 'io.bo',
     'system.in', 'system.cs',
-    'cpu.us', 'cpu.sy', 'cpu.id', 'cpu.wa', 'cpu.s',
+    'cpu.us', 'cpu.sy', 'cpu.id', 'cpu.wa', 'cpu.st',
+]
+LABELS_EXTRA = [
+    'cpu.gu',   # kvm guest
 ]
 
 
@@ -57,18 +60,28 @@ def vmstat_run():
     metric_header = lines[1]
     labels = []
     delimiter = 0
-    while delimiter >= 0:
+    while delimiter is not None:
         delimiter = category_header.find(' ')
+        if delimiter < 0:
+            delimiter = None
         category = category_header[:delimiter].strip('-')
         metrics = metric_header[:delimiter].split()
-        category_header = category_header[delimiter + 1:]
-        metric_header = metric_header[delimiter + 1:]
+        if delimiter:
+            category_header = category_header[delimiter + 1:]
+            metric_header = metric_header[delimiter + 1:]
         for metric in metrics:
             labels.append(f'{category}.{metric}')
-    if labels != LABELS_EXPECT:
+    extras = len(labels) - len(LABELS_EXPECT_BASE)
+    labels_expect = LABELS_EXPECT_BASE[:]
+    if extras > len(LABELS_EXTRA):
+        raise ValueError(f"Got too many labels, output will not match expected snmp items: {labels}")
+    if extras > 0:
+        labels_expect.extend(LABELS_EXTRA[:extras])
+    if labels != labels_expect:
         raise ValueError(f"Did not get expected labels, output will not match expected snmp items: {labels}")
     # parse values
     values = lines[-1].strip().split()
+    values += ['U'] * len(LABELS_EXTRA[extras:])
     return values
 
 
@@ -97,9 +110,9 @@ def main():
     # write file
     file_tmp = f'{file_out}_TMP{os.getpid()}'
     with open(file_tmp, 'wt') as f_out:
+        print(mem_total, file=f_out)
         for value in vmstat:
             print(value, file=f_out)
-        print(mem_total, file=f_out)
     os.rename(file_tmp, file_out)
 
 
